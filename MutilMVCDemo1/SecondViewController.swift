@@ -10,14 +10,22 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    
+    @IBOutlet weak var tfName: UITextField!
+    @IBOutlet weak var tfNo: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //yudtkl
+        
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func close(_ sender: Any) {
+        //关闭界面
+       // dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
