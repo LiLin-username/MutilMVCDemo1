@@ -23,7 +23,10 @@ class firstViewControl: UIViewController {
         //展示第二个界面
         
         //从文件里面恢复第二个界面的背景色
-        let secVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondVC")
+        let secVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondVC") as! SecondViewController
+     //传递参数
+        secVC.no = tfNo.text!
+        secVC.name = tfName.text!
         self.navigationController?.pushViewController(secVC, animated: true)
         //present(secVC,animated: true ,completion: nil )
      
@@ -33,6 +36,11 @@ class firstViewControl: UIViewController {
     @IBAction func showThirdVC(_ sender: Any) {
         //展示第三个界面
         let thirdVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ThirdVC")
+            as! ThridViewController
+        
+        //传递参数
+        thirdVC.no = tfNo.text!
+        thirdVC.name = tfName.text!
         present(thirdVC,animated: true ,completion: nil )
     }
     

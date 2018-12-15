@@ -9,11 +9,21 @@
 import UIKit
 
 class ThridViewController: UIViewController {
+    
 
+    @IBOutlet weak var tfName: UITextField!
+    @IBOutlet weak var tfNo: UITextField!
+    
+    
+//给其他界面指定一个接口
+    
+    var  name = ""
+    var no = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tfName.text = name
+        tfNo.text = no 
     }
     
     @IBAction func close(_ sender: Any) {

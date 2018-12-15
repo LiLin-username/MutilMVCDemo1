@@ -10,14 +10,17 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-    
+    //给其他界面指定一个接口
+    var  name = ""
+    var no = ""
     @IBOutlet weak var tfName: UITextField!
     @IBOutlet weak var tfNo: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tfName.text = name
+        tfNo.text = no 
 
-        // Do any additional setup after loading the view.
+       
     }
     
     @IBAction func close(_ sender: Any) {
